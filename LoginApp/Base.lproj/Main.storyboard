@@ -34,7 +34,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <segue destination="kVu-0H-icB" kind="presentation" id="Ml8-ue-nj1"/>
+                                            <segue destination="kVu-0H-icB" kind="presentation" modalPresentationStyle="fullScreen" id="Ml8-ue-nj1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -92,43 +92,51 @@
             <objects>
                 <viewController id="kVu-0H-icB" customClass="GreetingViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QaI-v0-Gnh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-rF-WXI">
-                                <rect key="frame" x="20" y="100" width="374" height="60"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="144" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YHZ-jh-pLI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5l-hP-ZaI">
-                                <rect key="frame" x="138.66666666666666" y="391" width="136.99999999999997" height="60"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="159.66666666666666" y="700" width="95" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logOutPressed" destination="kVu-0H-icB" eventType="touchUpInside" id="17i-8O-uWT"/>
                                     <segue destination="MNU-hx-vZp" kind="unwind" unwindAction="unwindFor:" id="8TN-JK-FJp"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swiftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-5A-vkc">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="S6c-Ja-5Eo"/>
+                                    <constraint firstAttribute="width" constant="200" id="wnM-wc-Sv1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rto-Vu-eiJ"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="c5l-hP-ZaI" firstAttribute="centerX" secondItem="QaI-v0-Gnh" secondAttribute="centerX" id="14h-Ob-77W"/>
                             <constraint firstItem="Rto-Vu-eiJ" firstAttribute="trailing" secondItem="qiY-rF-WXI" secondAttribute="trailing" constant="20" id="6Td-20-hgC"/>
                             <constraint firstItem="qiY-rF-WXI" firstAttribute="leading" secondItem="Rto-Vu-eiJ" secondAttribute="leading" constant="20" id="Vbp-0h-J5T"/>
-                            <constraint firstItem="c5l-hP-ZaI" firstAttribute="centerY" secondItem="QaI-v0-Gnh" secondAttribute="centerY" id="dsE-fu-6Ji"/>
+                            <constraint firstItem="Rto-Vu-eiJ" firstAttribute="bottom" secondItem="c5l-hP-ZaI" secondAttribute="bottom" constant="120" id="gg7-Kt-fi0"/>
+                            <constraint firstItem="xF4-5A-vkc" firstAttribute="centerX" secondItem="QaI-v0-Gnh" secondAttribute="centerX" id="m8U-eR-BBS"/>
                             <constraint firstItem="qiY-rF-WXI" firstAttribute="top" secondItem="Rto-Vu-eiJ" secondAttribute="top" constant="100" id="nQ3-lr-72M"/>
+                            <constraint firstItem="xF4-5A-vkc" firstAttribute="centerY" secondItem="QaI-v0-Gnh" secondAttribute="centerY" id="qfF-rG-kic"/>
+                            <constraint firstItem="c5l-hP-ZaI" firstAttribute="centerX" secondItem="QaI-v0-Gnh" secondAttribute="centerX" id="zXc-TJ-711"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Rz-ln-Lgb"/>
                     <connections>
                         <outlet property="greetingLabel" destination="qiY-rF-WXI" id="BRg-F1-s9s"/>
+                        <outlet property="image" destination="xF4-5A-vkc" id="U5H-xl-p4V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhM-8v-xnD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,14 +146,12 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="swiftLogo" width="2000" height="1800"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
