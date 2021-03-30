@@ -8,25 +8,26 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    // MARK: - IB Outlets
     @IBOutlet weak var forgotNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-   
+    
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
+    // MARK: - Private properties
     private let userName = "Batman"
     private let password = "123"
     
+    // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-       // super .touchesBegan(touches, with: event)
+        // super .touchesBegan(touches, with: event)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,13 +35,18 @@ class LoginViewController: UIViewController {
         greetingVC.userGreetingName = "Hello, \(userNameTextField.text ?? "")!"
     }
     
-   
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let _ = segue.source as? WelcomeViewController else { return }
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    // MARK: - IB Actions
     @IBAction func logInPressed() {
         if userNameTextField.text != userName || passwordTextField.text != password  {
             showAlertLoginButton()
         }
     }
-    
     
     @IBAction func forgotPressed(_ sender: UIButton) {
         switch sender {
@@ -52,13 +58,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let _ = segue.source as? WelcomeViewController else { return }
-        userNameTextField.text = ""
-        passwordTextField.text = ""
-    }
-    
-    
+    // MARK: - Private methods
     private func showAlertLoginPassword(type: String, data: String) {
         let alert = UIAlertController(
             title: "Let me see...",
@@ -71,7 +71,6 @@ class LoginViewController: UIViewController {
         alert.addAction(alertAction)
         present(alert, animated: true)
     }
-
     
     private func showAlertLoginButton() {
         let alert = UIAlertController(
@@ -87,20 +86,22 @@ class LoginViewController: UIViewController {
     
 }
 
-
+// MARK: - Return key setup
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         var result = true
+        
         switch textField {
         case userNameTextField:
             passwordTextField.becomeFirstResponder()
             result = true
         default:
             self.logInPressed()
+            self.performSegue(withIdentifier: "Segue", sender: nil)
             result = true
         }
         return result
     }
-        
+    
 }
 

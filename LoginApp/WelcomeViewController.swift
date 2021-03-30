@@ -8,7 +8,7 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
     @IBOutlet weak var greetingLabel: UILabel!
     
     var userGreetingName: String!
@@ -17,10 +17,10 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         greetingLabel.text = userGreetingName
     }
-   
+    
     @IBAction func logOutPressed() {
         dismiss(animated: true)
     }
     
-   
 }
+    
