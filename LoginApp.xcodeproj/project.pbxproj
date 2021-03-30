@@ -13,7 +13,7 @@
 		18B85A4B261304D60090E898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B85A49261304D60090E898 /* Main.storyboard */; };
 		18B85A4D261304D70090E898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B85A4C261304D70090E898 /* Assets.xcassets */; };
 		18B85A50261304D70090E898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B85A4E261304D70090E898 /* LaunchScreen.storyboard */; };
-		18B85A5C261353E60090E898 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A5B261353E60090E898 /* GreetingViewController.swift */; };
+		18B85A5C261353E60090E898 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A5B261353E60090E898 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		18B85A4C261304D70090E898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18B85A4F261304D70090E898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B85A51261304D70090E898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18B85A5B261353E60090E898 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		18B85A5B261353E60090E898 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				18B85A45261304D60090E898 /* SceneDelegate.swift */,
 				18B85A47261304D60090E898 /* LoginViewController.swift */,
 				18B85A49261304D60090E898 /* Main.storyboard */,
-				18B85A5B261353E60090E898 /* GreetingViewController.swift */,
+				18B85A5B261353E60090E898 /* WelcomeViewController.swift */,
 				18B85A4C261304D70090E898 /* Assets.xcassets */,
 				18B85A4E261304D70090E898 /* LaunchScreen.storyboard */,
 				18B85A51261304D70090E898 /* Info.plist */,
@@ -143,7 +143,7 @@
 				18B85A48261304D60090E898 /* LoginViewController.swift in Sources */,
 				18B85A44261304D60090E898 /* AppDelegate.swift in Sources */,
 				18B85A46261304D60090E898 /* SceneDelegate.swift in Sources */,
-				18B85A5C261353E60090E898 /* GreetingViewController.swift in Sources */,
+				18B85A5C261353E60090E898 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
