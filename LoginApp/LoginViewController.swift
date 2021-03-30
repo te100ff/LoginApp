@@ -24,6 +24,10 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? GreetingViewController else { return }
         greetingVC.userGreetingName = "Hello, \(userNameTextField.text ?? "hacker")!"
