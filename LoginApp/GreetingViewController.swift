@@ -10,7 +10,6 @@ import UIKit
 class GreetingViewController: UIViewController {
 
     @IBOutlet weak var greetingLabel: UILabel!
-    @IBOutlet weak var image: UIImageView!
     
     var userGreetingName: String!
     

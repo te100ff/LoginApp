@@ -34,6 +34,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
+                                            <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFO-bS-b50"/>
                                             <segue destination="kVu-0H-icB" kind="presentation" modalPresentationStyle="fullScreen" id="Ml8-ue-nj1"/>
                                         </connections>
                                     </button>
@@ -113,7 +114,7 @@
                                     <segue destination="MNU-hx-vZp" kind="unwind" unwindAction="unwindFor:" id="8TN-JK-FJp"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swiftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-5A-vkc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Batman" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-5A-vkc">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="S6c-Ja-5Eo"/>
@@ -133,10 +134,8 @@
                             <constraint firstItem="c5l-hP-ZaI" firstAttribute="centerX" secondItem="QaI-v0-Gnh" secondAttribute="centerX" id="zXc-TJ-711"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8Rz-ln-Lgb"/>
                     <connections>
                         <outlet property="greetingLabel" destination="qiY-rF-WXI" id="BRg-F1-s9s"/>
-                        <outlet property="image" destination="xF4-5A-vkc" id="U5H-xl-p4V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhM-8v-xnD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,7 +145,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="swiftLogo" width="2000" height="1800"/>
+        <image name="Batman" width="1082" height="1600"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
