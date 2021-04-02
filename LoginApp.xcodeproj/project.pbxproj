@@ -39,6 +39,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188E1031261721910063DC15 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A47261304D60090E898 /* LoginViewController.swift */,
+				18B85A5B261353E60090E898 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		188E1033261721B80063DC15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		188E1034261721D50063DC15 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A49261304D60090E898 /* Main.storyboard */,
+				18B85A4E261304D70090E898 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		188E1035261721EA0063DC15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A4C261304D70090E898 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		188E1036261722000063DC15 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A43261304D60090E898 /* AppDelegate.swift */,
+				18B85A45261304D60090E898 /* SceneDelegate.swift */,
+				18B85A51261304D70090E898 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		18B85A37261304D60090E898 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +101,11 @@
 		18B85A42261304D60090E898 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				18B85A43261304D60090E898 /* AppDelegate.swift */,
-				18B85A45261304D60090E898 /* SceneDelegate.swift */,
-				18B85A47261304D60090E898 /* LoginViewController.swift */,
-				18B85A49261304D60090E898 /* Main.storyboard */,
-				18B85A5B261353E60090E898 /* WelcomeViewController.swift */,
-				18B85A4C261304D70090E898 /* Assets.xcassets */,
-				18B85A4E261304D70090E898 /* LaunchScreen.storyboard */,
-				18B85A51261304D70090E898 /* Info.plist */,
+				188E1031261721910063DC15 /* ViewControllers */,
+				188E1033261721B80063DC15 /* Models */,
+				188E1034261721D50063DC15 /* Storyboards */,
+				188E1036261722000063DC15 /* Support */,
+				188E1035261721EA0063DC15 /* Resources */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -292,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

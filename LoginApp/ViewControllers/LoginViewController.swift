@@ -26,17 +26,16 @@ class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-        // super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? WelcomeViewController else { return }
-        greetingVC.userGreetingName = "Hello, \(userNameTextField.text ?? "")!"
+        greetingVC.userGreetingName = userName
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let _ = segue.source as? WelcomeViewController else { return }
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
@@ -49,14 +48,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPressed(_ sender: UIButton) {
-        switch sender {
-        case forgotNameButton:
-            showAlertLoginPassword(type: "name", data: userName + "🦇" )
-        default:
-            showAlertLoginPassword(type: "password", data: password + "🔑")
-            passwordTextField.text = ""
-        }
-    }
+        sender == forgotNameButton
+            ? showAlertLoginPassword(type: "name", data: userName + "🦇" )
+            : showAlertLoginPassword(type: "password", data: password + "🔑")
+        passwordTextField.text = ""
+}
     
     // MARK: - Private methods
     private func showAlertLoginPassword(type: String, data: String) {
@@ -89,19 +85,15 @@ class LoginViewController: UIViewController {
 // MARK: - Return key setup
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        var result = true
-        
-        switch textField {
-        case userNameTextField:
+        if textField == userNameTextField {
             passwordTextField.becomeFirstResponder()
-            result = true
-        default:
+        } else {
             self.logInPressed()
             self.performSegue(withIdentifier: "Segue", sender: nil)
-            result = true
+
         }
-        return result
+        return true
     }
-    
+
 }
 
