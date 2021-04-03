@@ -16,10 +16,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    // MARK: - Private properties
-    private let userName = "Batman"
-    private let password = "123"
-    
+    // MARK: - Public properties
+    let user = User(about: Person(), relations: [.son, .wife])
+        
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +29,24 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingVC = segue.destination as? WelcomeViewController else { return }
-        greetingVC.userGreetingName = userName
+        let greetingVC = segue.destination as! WelcomeTabViewController
+        
+        guard let viewControlers = greetingVC.viewControllers else { return }
+        
+        for viewController in viewControlers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userGreetingName = user.about.name
+                welcomeVC.userGreetingSurname = user.about.surname
+            } else if let photoVC = viewController as? PhotoViewController {
+                photoVC.photoName = user.photo
+            } else if let navigationVC = viewController as? BioNavigationViewController {
+                let aboutVC = navigationVC.topViewController as! BioViewController
+                aboutVC.user = user
+                
+            }
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -42,17 +56,17 @@ class LoginViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func logInPressed() {
-        if userNameTextField.text != userName || passwordTextField.text != password  {
+        if userNameTextField.text != user.login || passwordTextField.text != user.password {
             showAlertLoginButton()
         }
     }
     
     @IBAction func forgotPressed(_ sender: UIButton) {
         sender == forgotNameButton
-            ? showAlertLoginPassword(type: "name", data: userName + "🦇" )
-            : showAlertLoginPassword(type: "password", data: password + "🔑")
+            ? showAlertLoginPassword(type: "name", data: user.login + "🦇" )
+            : showAlertLoginPassword(type: "password", data: user.password + "🔑")
         passwordTextField.text = ""
-}
+    }
     
     // MARK: - Private methods
     private func showAlertLoginPassword(type: String, data: String) {
@@ -90,10 +104,10 @@ extension LoginViewController: UITextFieldDelegate {
         } else {
             self.logInPressed()
             self.performSegue(withIdentifier: "Segue", sender: nil)
-
+            
         }
         return true
     }
-
+    
 }
 
