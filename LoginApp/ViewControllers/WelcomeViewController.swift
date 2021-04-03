@@ -11,16 +11,13 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var greetingLabel: UILabel!
     
-    var userGreetingName: String!
+    var userGreetingName = ""
+    var userGreetingSurname = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.text = userGreetingName
-    }
-    
-    @IBAction func logOutPressed() {
-        dismiss(animated: true)
+        greetingLabel.text = "\(userGreetingName) \(userGreetingSurname)!"
     }
     
 }
-    
+

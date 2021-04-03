@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185A0D202617775E00F88F17 /* FamilyTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A0D1F2617775E00F88F17 /* FamilyTreeViewController.swift */; };
+		188E103D2617313E0063DC15 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E103C2617313E0063DC15 /* BioViewController.swift */; };
 		18B85A44261304D60090E898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A43261304D60090E898 /* AppDelegate.swift */; };
 		18B85A46261304D60090E898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A45261304D60090E898 /* SceneDelegate.swift */; };
 		18B85A48261304D60090E898 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A47261304D60090E898 /* LoginViewController.swift */; };
@@ -14,9 +16,13 @@
 		18B85A4D261304D70090E898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B85A4C261304D70090E898 /* Assets.xcassets */; };
 		18B85A50261304D70090E898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B85A4E261304D70090E898 /* LaunchScreen.storyboard */; };
 		18B85A5C261353E60090E898 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A5B261353E60090E898 /* WelcomeViewController.swift */; };
+		18CA853B26178531004BE3E1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA853A26178531004BE3E1 /* PhotoViewController.swift */; };
+		18CA85402617A7D5004BE3E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA853F2617A7D5004BE3E1 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185A0D1F2617775E00F88F17 /* FamilyTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTreeViewController.swift; sourceTree = "<group>"; };
+		188E103C2617313E0063DC15 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BioViewController.swift; path = LoginApp/ViewControllers/BioViewController.swift; sourceTree = SOURCE_ROOT; };
 		18B85A40261304D60090E898 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B85A43261304D60090E898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B85A45261304D60090E898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		18B85A4F261304D70090E898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B85A51261304D70090E898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18B85A5B261353E60090E898 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		18CA853A26178531004BE3E1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		18CA853F2617A7D5004BE3E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188E1031261721910063DC15 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A47261304D60090E898 /* LoginViewController.swift */,
+				18B85A5B261353E60090E898 /* WelcomeViewController.swift */,
+				188E103C2617313E0063DC15 /* BioViewController.swift */,
+				185A0D1F2617775E00F88F17 /* FamilyTreeViewController.swift */,
+				18CA853A26178531004BE3E1 /* PhotoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		188E1033261721B80063DC15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18CA853F2617A7D5004BE3E1 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		188E1034261721D50063DC15 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A49261304D60090E898 /* Main.storyboard */,
+				18B85A4E261304D70090E898 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		188E1035261721EA0063DC15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A4C261304D70090E898 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		188E1036261722000063DC15 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				18B85A43261304D60090E898 /* AppDelegate.swift */,
+				18B85A45261304D60090E898 /* SceneDelegate.swift */,
+				18B85A51261304D70090E898 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		18B85A37261304D60090E898 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +113,11 @@
 		18B85A42261304D60090E898 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				18B85A43261304D60090E898 /* AppDelegate.swift */,
-				18B85A45261304D60090E898 /* SceneDelegate.swift */,
-				18B85A47261304D60090E898 /* LoginViewController.swift */,
-				18B85A49261304D60090E898 /* Main.storyboard */,
-				18B85A5B261353E60090E898 /* WelcomeViewController.swift */,
-				18B85A4C261304D70090E898 /* Assets.xcassets */,
-				18B85A4E261304D70090E898 /* LaunchScreen.storyboard */,
-				18B85A51261304D70090E898 /* Info.plist */,
+				188E1031261721910063DC15 /* ViewControllers */,
+				188E1033261721B80063DC15 /* Models */,
+				188E1034261721D50063DC15 /* Storyboards */,
+				188E1036261722000063DC15 /* Support */,
+				188E1035261721EA0063DC15 /* Resources */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -141,9 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B85A48261304D60090E898 /* LoginViewController.swift in Sources */,
+				185A0D202617775E00F88F17 /* FamilyTreeViewController.swift in Sources */,
 				18B85A44261304D60090E898 /* AppDelegate.swift in Sources */,
+				18CA853B26178531004BE3E1 /* PhotoViewController.swift in Sources */,
 				18B85A46261304D60090E898 /* SceneDelegate.swift in Sources */,
 				18B85A5C261353E60090E898 /* WelcomeViewController.swift in Sources */,
+				18CA85402617A7D5004BE3E1 /* User.swift in Sources */,
+				188E103D2617313E0063DC15 /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
