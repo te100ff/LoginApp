@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185A0D1C2617703500F88F17 /* BioNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A0D1B2617703500F88F17 /* BioNavigationViewController.swift */; };
 		185A0D202617775E00F88F17 /* FamilyTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A0D1F2617775E00F88F17 /* FamilyTreeViewController.swift */; };
-		188E10392617256D0063DC15 /* WelcomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E10382617256D0063DC15 /* WelcomeTabViewController.swift */; };
 		188E103D2617313E0063DC15 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E103C2617313E0063DC15 /* BioViewController.swift */; };
 		18B85A44261304D60090E898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A43261304D60090E898 /* AppDelegate.swift */; };
 		18B85A46261304D60090E898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B85A45261304D60090E898 /* SceneDelegate.swift */; };
@@ -23,9 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185A0D1B2617703500F88F17 /* BioNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BioNavigationViewController.swift; path = LoginApp/ViewControllers/BioNavigationViewController.swift; sourceTree = SOURCE_ROOT; };
 		185A0D1F2617775E00F88F17 /* FamilyTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTreeViewController.swift; sourceTree = "<group>"; };
-		188E10382617256D0063DC15 /* WelcomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeTabViewController.swift; path = LoginApp/ViewControllers/WelcomeTabViewController.swift; sourceTree = SOURCE_ROOT; };
 		188E103C2617313E0063DC15 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BioViewController.swift; path = LoginApp/ViewControllers/BioViewController.swift; sourceTree = SOURCE_ROOT; };
 		18B85A40261304D60090E898 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B85A43261304D60090E898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				18B85A47261304D60090E898 /* LoginViewController.swift */,
-				188E10382617256D0063DC15 /* WelcomeTabViewController.swift */,
 				18B85A5B261353E60090E898 /* WelcomeViewController.swift */,
-				185A0D1B2617703500F88F17 /* BioNavigationViewController.swift */,
 				188E103C2617313E0063DC15 /* BioViewController.swift */,
 				185A0D1F2617775E00F88F17 /* FamilyTreeViewController.swift */,
 				18CA853A26178531004BE3E1 /* PhotoViewController.swift */,
@@ -199,10 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B85A48261304D60090E898 /* LoginViewController.swift in Sources */,
-				185A0D1C2617703500F88F17 /* BioNavigationViewController.swift in Sources */,
 				185A0D202617775E00F88F17 /* FamilyTreeViewController.swift in Sources */,
 				18B85A44261304D60090E898 /* AppDelegate.swift in Sources */,
-				188E10392617256D0063DC15 /* WelcomeTabViewController.swift in Sources */,
 				18CA853B26178531004BE3E1 /* PhotoViewController.swift in Sources */,
 				18B85A46261304D60090E898 /* SceneDelegate.swift in Sources */,
 				18B85A5C261353E60090E898 /* WelcomeViewController.swift in Sources */,

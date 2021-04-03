@@ -18,20 +18,11 @@ class LoginViewController: UIViewController {
     
     // MARK: - Public properties
     let user = User(about: Person(), relations: [.son, .wife])
-        
-    // MARK: - Override methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let greetingVC = segue.destination as! WelcomeTabViewController
+        let greetingVC = segue.destination as! UITabBarController
         
         guard let viewControlers = greetingVC.viewControllers else { return }
         
@@ -41,10 +32,9 @@ class LoginViewController: UIViewController {
                 welcomeVC.userGreetingSurname = user.about.surname
             } else if let photoVC = viewController as? PhotoViewController {
                 photoVC.photoName = user.photo
-            } else if let navigationVC = viewController as? BioNavigationViewController {
+            } else if let navigationVC = viewController as? UINavigationController {
                 let aboutVC = navigationVC.topViewController as! BioViewController
                 aboutVC.user = user
-                
             }
         }
     }
@@ -68,7 +58,7 @@ class LoginViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    // MARK: - Private methods
+    // MARK: - Private methods for alerts
     private func showAlertLoginPassword(type: String, data: String) {
         let alert = UIAlertController(
             title: "Let me see...",
@@ -96,15 +86,19 @@ class LoginViewController: UIViewController {
     
 }
 
-// MARK: - Return key setup
+// MARK: - Keyboard setup
 extension LoginViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField {
             passwordTextField.becomeFirstResponder()
         } else {
-            self.logInPressed()
-            self.performSegue(withIdentifier: "Segue", sender: nil)
-            
+            logInPressed()
+            performSegue(withIdentifier: "Segue", sender: nil)
         }
         return true
     }

@@ -8,9 +8,8 @@
 import UIKit
 
 class BioViewController: UIViewController {
-
-    @IBOutlet weak var aboutTextView: UITextView!
     
+    @IBOutlet weak var aboutTextView: UITextView!
     
     var user: User!
     
@@ -20,22 +19,18 @@ class BioViewController: UIViewController {
         navigationItem.title = user.about.name + " " + user.about.surname
     }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let familyVC = segue.destination as! FamilyTreeViewController
         
-        
-        if let topName = user.relations.first {
-            familyVC.topName = topName.rawValue
-            familyVC.topAbout = topName.about
-            
+        for member in user.relations {
+            if member == user.relations.first(where: { $0 == .wife }) {
+                familyVC.topName = member.rawValue
+                familyVC.topAbout = member.about
+            } else {
+                familyVC.botomName = member.rawValue
+                familyVC.botomAbout = member.about
+            }
         }
-        
-        if let botomName = user.relations.last {
-            familyVC.botomName = botomName.rawValue
-            familyVC.botomAbout = botomName.about
-            
-        }
-        
     }
+    
 }
