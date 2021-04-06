@@ -15,8 +15,8 @@ class BioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        aboutTextView.text = user.about.bio
-        navigationItem.title = user.about.name + " " + user.about.surname
+        aboutTextView.text = user.person.bio
+        navigationItem.title = user.person.fullName
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

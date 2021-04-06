@@ -16,8 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    // MARK: - Public properties
-    let user = User(about: Person(), relations: [.son, .wife])
+    // MARK: - Private properties
+    private let user = User.getUser()
     
     
     // MARK: - Navigation
@@ -28,8 +28,8 @@ class LoginViewController: UIViewController {
         
         for viewController in viewControlers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userGreetingName = user.about.name
-                welcomeVC.userGreetingSurname = user.about.surname
+                welcomeVC.userGreetingName = user.person.fullName
+               // welcomeVC.userGreetingSurname = user.about.surname
             } else if let photoVC = viewController as? PhotoViewController {
                 photoVC.photoName = user.photo
             } else if let navigationVC = viewController as? UINavigationController {
